@@ -1,0 +1,41 @@
+CREATE TABLE IF NOT EXISTS products (
+                                        id VARCHAR(255) PRIMARY KEY,
+                                        name VARCHAR(255) NOT NULL,
+                                        product_group VARCHAR(255) NOT NULL,
+                                        sale_price DECIMAL(10,2) NOT NULL,
+                                        last_sale_date DATE NOT NULL,
+                                        quantity_sold INT NOT NULL
+);
+
+INSERT INTO products (id, name, product_group, sale_price, last_sale_date, quantity_sold)
+VALUES
+    ('1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d', 'agua tonica', 'bebidas', 3.00, '2021-01-02', 50),
+    ('2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d', 'refrigerante light', 'bebidas', 4.00, '2021-02-15', 30),
+    ('3a4b5c6d-7e8f-9a0b-1c2d-3e4f5a6b7c8d', 'suco de laranja', 'bebidas', 5.00, '2022-03-10', 25),
+    ('4a5b6c7d-8e9f-0a1b-2c3d-4e5f6a7b8c9d', 'cerveja artesanal', 'bebidas', 6.00, '2022-04-22', 60),
+    ('5a6b7c8d-9e0f-1a2b-3c4d-5e6f7a8b9c0d', 'vinho tinto', 'bebidas', 15.00, '2023-02-18', 20),
+    ('6a7b8c9d-0e1f-2a3b-4c5d-6e7f8a9b0c1d', 'iogurte grego', 'laticinios', 3.50, '2023-09-03', 70),
+    ('7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d', 'leite desnatado', 'laticinios', 4.00, '2020-07-22', 50),
+    ('8a9b0c1d-2e3f-4a5b-6c7d-8e9f0a1b2c3d', 'queijo brie', 'laticinios', 8.00, '2021-12-10', 30),
+    ('9a0b1c2d-3e4f-5a6b-7c8d-9e0f1a2b3c4d', 'requeijao light', 'laticinios', 6.00, '2023-03-12', 45),
+    ('0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d', 'pao integral', 'padaria', 2.50, '2022-08-25', 120),
+    ('1b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e', 'croissant de chocolate', 'padaria', 3.00, '2022-09-14', 80),
+    ('2c3d4e5f-6a7b-8c9d-0e1f-2a3b4c5d6e7f', 'baguette francesa', 'padaria', 4.00, '2022-10-08', 60),
+    ('3d4e5f6a-7b8c-9d0e-1f2a-3b4c5d6e7f8g', 'muffin de blueberry', 'padaria', 3.50, '2023-05-19', 75),
+    ('4e5f6a7b-8c9d-0e1f-2a3b-4c5d6e7f8g9h', 'donut de morango', 'padaria', 2.50, '2023-06-23', 100),
+    ('5f6a7b8c-9d0e-1f2a-3b4c-5d6e7f8g9h0i', 'bagel com cream cheese', 'padaria', 3.00, '2023-07-30', 90),
+    ('6a7b8c9d-0e1f-2a3b-4c5d-6e7f8g9h0i1j', 'hamburguer de frango', 'lanches', 9.00, '2021-01-15', 55),
+    ('7b8c9d0e-1f2a-3b4c-5d6e-7f8g9h0i1j2k', 'cachorro-quente vegano', 'lanches', 7.00, '2021-02-28', 65),
+    ('8c9d0e1f-2a3b-4c5d-6e7f-8g9h0i1j2k3l', 'sanduiche natural', 'lanches', 8.00, '2022-03-20', 50),
+    ('9d0e1f2a-3b4c-5d6e-7f8g-9h0i1j2k3l4m', 'pizza de calabresa', 'lanches', 18.00, '2022-04-25', 40),
+    ('0e1f2a3b-4c5d-6e7f-8g9h-0i1j2k3l4m5n', 'salgado de frango', 'lanches', 4.50, '2022-05-15', 70),
+    ('1f2a3b4c-5d6e-7f8g-9h0i-1j2k3l4m5n6o', 'burrito de carne', 'lanches', 10.00, '2023-07-12', 45),
+    ('2a3b4c5d-6e7f-8g9h-0i1j-2k3l4m5n6o7p', 'taco de camarao', 'lanches', 12.00, '2023-08-30', 55),
+    ('3b4c5d6e-7f8g-9h0i-1j2k-3l4m5n6o7p8q', 'wrap de frango', 'lanches', 9.00, '2023-09-14', 65),
+    ('4c5d6e7f-8g9h-0i1j-2k3l-4m5n6o7p8q9r', 'pastel de carne', 'lanches', 5.00, '2023-10-07', 80),
+    ('5d6e7f8g-9h0i-1j2k-3l4m-5n6o7p8q9r0s', 'empada de palmito', 'lanches', 6.00, '2023-11-15', 60),
+    ('6e7f8g9h-0i1j-2k3l-4m5n-6o7p8q9r0s1t', 'coxinha de jaca', 'lanches', 7.00, '2023-12-22', 90),
+    ('7f8g9h0i-1j2k-3l4m-5n6o-7p8q9r0s1t2u', 'sopa de abobora', 'sopas', 8.50, '2021-02-14', 35),
+    ('8g9h0i1j-2k3l-4m5n-6o7p-8q9r0s1t2u3v', 'caldo de mandioquinha', 'sopas', 11.00, '2021-03-16', 40),
+    ('9h0i1j2k-3l4m-5n6o-7p8q-9r0s1t2u3v4w', 'sopa de cebola', 'sopas', 10.50, '2022-04-20', 45),
+    ('0i1j2k3l-4m5n-6o7p-8q9r-0s1t2u3v4w5x', 'canja de galinha', 'sopas', 9.50, '2022-05-30', 50);
